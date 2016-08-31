@@ -3,14 +3,14 @@
 // Definitions by: Alex Ford <https://github.com/gustavderdrache>, Boris Yankov <https://github.com/borisyankov>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import {Selection, BaseType, ArrayLike, ValueFn} from '../d3-selection/index.d.ts';
-import {Transition} from '../d3-transition/index.d.ts';
+import {Selection, BaseType, ArrayLike, ValueFn} from '../d3-selection/index/';
+import {Transition} from '../d3-transition/index/';
 
 
 // An object mapping attribute (or style or property) names to value accessors
 export type ValueMap<Element, Datum> = { [key: string]: number | string | boolean | null | ValueFn<Element, Datum, number | string | boolean | null> };
 
-declare module '../d3-selection/index.d.ts' {
+declare module '../d3-selection/index/' {
     export interface Selection<GElement extends BaseType, Datum, PElement extends BaseType, PDatum> {
         /**
          * Set multiple attributes on the given selection. Attribute values may be constant or derived from each node and its bound data.
@@ -58,7 +58,7 @@ declare module '../d3-selection/index.d.ts' {
     }
 }
 
-declare module '../d3-transition/index.d.ts' {
+declare module '../d3-transition/index/' {
     export interface Transition<GElement extends BaseType, Datum, PElement extends BaseType, PDatum> {
         /**
          * Set multiple attribute values. The transition will animate from the present value to the new value. Attribute values may be constant or derived from each node and its bound data.
